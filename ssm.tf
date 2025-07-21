@@ -10,9 +10,9 @@ locals {
     DATABASE_USER         = aws_db_instance.postgres.username
     DATABASE_PASSWORD     = aws_db_instance.postgres.password
     JWT_SECRET            = "a7a633e7-9e7c-43cf-9624-8820e386627f"
-    CLOUDINARY_API_KEY    = "173121799988263"
-    CLOUDINARY_API_SECRET = "tWH_mFNVsvbFPisz4uIiv4S9sz8"
-    CLOUDINARY_CLOUD_NAME = "dfokszaik"
+    CLOUDINARY_API_KEY    = "XXX"
+    CLOUDINARY_API_SECRET = "XXX"
+    CLOUDINARY_CLOUD_NAME = "XXX"
     APP_URL               = "http://${aws_lb.api.dns_name}"
   }
 }

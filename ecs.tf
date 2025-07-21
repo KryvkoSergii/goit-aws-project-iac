@@ -50,7 +50,7 @@ resource "aws_ecs_task_definition" "api" {
   container_definitions = jsonencode([
     {
       name      = "api"
-      image     = "307987835663.dkr.ecr.eu-north-1.amazonaws.com/goit/api-service:2"
+      image     = "307987835663.dkr.ecr.eu-north-1.amazonaws.com/goit/api-service:4"
       cpu       = 256
       memory    = 512
       portMappings = [{ containerPort = 80, hostPort = 80, protocol = "tcp" }]
@@ -63,7 +63,7 @@ resource "aws_ecs_task_definition" "api" {
         }
       }
       healthCheck = {
-        command     = ["CMD-SHELL", "curl -f http://localhost:80/api/categories || exit 1"],
+        command     = ["CMD-SHELL", "curl -f http://localhost/api/categories/ || exit 1"],
         interval    = 10,
         timeout     = 5,
         retries     = 3,
